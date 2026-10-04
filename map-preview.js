@@ -3,6 +3,7 @@
   const preview = document.querySelector('#map-preview');
   const viewport = preview.querySelector('.map-preview-viewport');
   const image = preview.querySelector('img');
+  const loading = preview.querySelector('.map-loading');
   const closeButton = document.querySelector('#map-close');
   const zoomIn = document.querySelector('#map-zoom-in');
   const zoomOut = document.querySelector('#map-zoom-out');
@@ -31,6 +32,11 @@
     previousBodyStyle = document.body.getAttribute('style');
     Object.assign(document.body.style, {position:'fixed', top:`-${scrollY}px`, width:'100%', overflow:'hidden'});
     preview.hidden = false;
+    if (!image.getAttribute('src') || !image.complete || !image.naturalWidth) {
+      loading.hidden = false;
+      loading.textContent = '地图加载中…';
+      image.src = image.dataset.src;
+    }
     reset();
     closeButton.focus({preventScroll:true});
   }
@@ -75,7 +81,8 @@
   zoomIn.addEventListener('click', () => zoom(1.5));
   zoomOut.addEventListener('click', () => zoom(1/1.5));
   resetButton.addEventListener('click', reset);
-  image.addEventListener('load', render);
+  image.addEventListener('load', () => { loading.hidden = true; render(); });
+  image.addEventListener('error', () => { loading.hidden = false; loading.textContent = '地图加载失败，请关闭后重试'; });
   window.addEventListener('resize', () => { if (!preview.hidden) render(); });
   viewport.addEventListener('touchstart', event => { event.preventDefault(); begin(event.touches); }, {passive:false});
   viewport.addEventListener('touchmove', event => { event.preventDefault(); move(event.touches); }, {passive:false});
