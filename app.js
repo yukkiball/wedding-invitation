@@ -1,4 +1,4 @@
-const wedding = { names: ['戴瑞麟', '张语漾'], date: '2026-11-22', venue: '听松楼花园酒店', room: '一楼 · 楓雅聚包厢', address: '江苏省常州市天宁区罗汉路1号', time: '午宴' };
+const wedding = { names: ['戴瑞麟', '张语漾'], date: '2026-11-22', venue: '听松楼花园酒店', room: '一楼 · 楓雅聚包厢', address: '江苏省常州市天宁区罗汉路1号', time: '11:58', timeLabel: '午宴' };
 const toast = document.querySelector('#toast');
 let toastTimer;
 function showToast(message) { toast.textContent = message; toast.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { toast.hidden = true; }, 3500); }
