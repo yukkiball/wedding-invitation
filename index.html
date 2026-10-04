@@ -5,7 +5,7 @@
   <meta name="theme-color" content="#8bcbe2"><meta name="description" content="戴瑞麟与张语漾的婚礼邀请。2026年11月22日，听松楼花园酒店，期待与你相见。">
   <title>戴瑞麟 & 张语漾 · 我们的婚礼邀请</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23e87583' d='M2 3h4v2h4V3h4v6h-2v2h-2v2H6v-2H4V9H2z'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css?v=compressed-images-1"><script src="app.js?v=map-preview-1" defer></script><script src="map-preview.js?v=2" defer></script>
+  <link rel="stylesheet" href="style.css?v=simple-map-1"><script src="app.js?v=1" defer></script>
 </head>
 <body>
   <svg class="icon-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
@@ -31,7 +31,7 @@
         <p class="hero-message">我们要结婚啦！<br class="mobile-break">邀请你来，见证我们的幸福存档。</p>
         <a class="pixel-button hero-button" href="#invitation"><svg><use href="#heart"/></svg>打开我们的邀请</a>
       </div>
-      <div class="game-wedding-scene"><img class="wedding-screenshot" src="assets/stardew-wedding.webp" alt="星露谷游戏里的婚礼仪式，村民在花拱门前见证新人"><img class="game-sprite scene-junimo" src="assets/junimo.gif" alt=""><span>STARDEW VALLEY · 幸福存档</span></div>
+      <div class="game-wedding-scene"><img class="wedding-screenshot" src="assets/stardew-wedding-small.webp" alt="星露谷游戏里的婚礼仪式，村民在花拱门前见证新人"><img class="game-sprite scene-junimo" src="assets/junimo.gif" alt=""><span>STARDEW VALLEY · 幸福存档</span></div>
       <div class="hero-bottom"><span class="little-star">✦</span> 2026.11.22 <span class="dot">·</span> 听松楼花园酒店 <span class="little-star">✦</span></div>
       <a class="scroll-hint" href="#invitation" aria-label="向下阅读婚礼邀请">向下探索 <span>⌄</span></a>
     </section>
@@ -58,18 +58,13 @@
     <section id="location" class="location section-wrap" aria-labelledby="location-title">
       <div class="section-heading"><span class="section-index">02 / SEE YOU THERE</span><h2 id="location-title">幸福的坐标，等你来赴约</h2><p>在秋日的园林里，留一个位置给你。</p></div>
       <div class="location-board">
-        <button type="button" class="location-map" aria-haspopup="dialog" aria-controls="map-preview" aria-label="查看常州婚礼周边游玩地图大图"><img src="assets/changzhou-map-preview.webp" alt="常州周末游玩地图，以听松楼婚礼举办地为中心，标注常州火车站、天宁寺、青果巷等周边地点" width="1920" height="1279" loading="lazy"><span>点击地图查看大图</span></button>
-        <div class="location-copy"><span class="detail-kicker">WEDDING VENUE</span><h3>听松楼花园酒店</h3><p>江苏省常州市天宁区罗汉路 1 号<br>红梅公园 · 一楼楓雅聚包厢</p><a class="pixel-button green-button" href="https://surl.amap.com/3GY3L6HwbZK" target="_blank" rel="noopener noreferrer"><svg><use href="#pin"/></svg>打开高德导航</a></div>
+        <div class="location-map"><img src="assets/changzhou-map-preview.webp" alt="常州周末游玩地图，以听松楼婚礼举办地为中心，标注常州火车站、天宁寺、青果巷等周边地点" width="1920" height="1279" loading="lazy"></div>
+        <div class="location-copy"><span class="detail-kicker">WEDDING VENUE</span><h3>听松楼花园酒店</h3><p>江苏省常州市天宁区罗汉路 1 号<br>红梅公园 · 一楼楓雅聚包厢</p><a class="pixel-button green-button" href="https://surl.amap.com/3GY3L6HwbZK" target="_blank" rel="noopener noreferrer"><svg><use href="#pin"/></svg>打开导航</a></div>
       </div>
       <div class="travel-note"><svg><use href="#sun"/></svg><p>带上好心情，空着肚子来。<br class="mobile-break">我们在这里，等你一起开启新篇章。</p></div>
     </section>
   </main>
   <footer><img class="game-sprite footer-junimo" src="assets/junimo.gif" alt="祝尼魔"><p>戴瑞麟 <span>&</span> 张语漾</p><span>2026.11.22 · 不见不散</span><small>WITH LOVE, ALWAYS.</small></footer>
-  <div id="map-preview" class="map-preview" role="dialog" aria-modal="true" aria-labelledby="map-preview-title" hidden>
-    <div class="map-preview-header"><span id="map-preview-title">常州婚礼周边游玩地图</span><button type="button" id="map-close" aria-label="关闭地图">关闭 ×</button></div>
-    <div class="map-preview-viewport"><img class="map-preview-image" data-src="assets/changzhou-map-full.webp" alt="常州婚礼周边游玩地图" width="1920" height="1279" draggable="false"><p class="map-loading" role="status">地图加载中…</p></div>
-    <div class="map-preview-controls"><p>双指缩放 · 拖动查看</p><div><button type="button" id="map-zoom-out" aria-label="缩小地图">−</button><button type="button" id="map-reset">还原</button><button type="button" id="map-zoom-in" aria-label="放大地图">＋</button></div></div>
-  </div>
   <div id="toast" role="status" class="toast" hidden></div>
 </body>
 </html>
